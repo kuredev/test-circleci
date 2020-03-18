@@ -4,7 +4,7 @@ commands:
     steps:
       - run: echo "hello from commands"
 jobs:
-  build:
+  builddd:
     docker:
       - image: circleci/ruby:2.6.5
     steps:
