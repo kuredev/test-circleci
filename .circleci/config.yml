@@ -1,4 +1,8 @@
 version: 2.1
+executors:
+  my-exe:
+    docker:
+      -image: circleci/ruby:2.6.5
 commands:
   say_hello:
     steps:
@@ -11,16 +15,14 @@ workflows:
       - job2
 jobs:
   job1:
-    docker:
-      - image: circleci/ruby:2.6.5
+    executor: my-exe
     steps:
       - checkout
       - run: echo "hello world"
       - say_hello
 
   job2:
-    docker:
-      - image: circleci/ruby:2.6.5
+    executor: my-exe
     steps:
       - checkout
       - run: echo "hello world"
