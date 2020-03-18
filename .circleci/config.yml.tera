@@ -1,0 +1,36 @@
+version: 2.1
+executors:
+  my-exe:
+    docker:
+      - image: circleci/ruby:2.6.5
+  my-tera:
+    docker:
+      - image: hashicorp/terraform:0.12.20
+commands:
+  say_hello:
+    steps:
+      - run: echo "hello from commands"
+workflows:
+  version: 2
+  build:
+    jobs:
+      - job1
+      - job3
+jobs:
+  job1:
+    executor:
+      name: my-exe
+    steps:
+      - checkout
+      - run: echo "hello world"
+      - say_hello
+  job3:
+    executor:
+      name: my-tera
+    steps:
+      - checkout
+      - run: echo "hello terraform"
+      - run: terraform version
+difinitions:
+difinitionss:
+    
