@@ -5,7 +5,7 @@ commands:
       - run: echo "hello from commands"
 workflows:
   version: 2
-  build-deploy:
+  build:
     jobs:
       - job1:
       - job2:
