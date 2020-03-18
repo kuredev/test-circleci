@@ -3,6 +3,12 @@ commands:
   say_hello:
     steps:
       - run: echo "hello from commands"
+workflows:
+  version: 2
+  build:
+    jobs:
+      - job1
+      - job2
 jobs:
   job1:
     docker:
@@ -19,11 +25,4 @@ jobs:
       - checkout
       - run: echo "hello world"
       - say_hello
-workflows:
-  version: 2
-  build:
-    jobs:
-      - job1
-      - job2
-
     
