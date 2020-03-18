@@ -15,18 +15,9 @@ workflows:
   build:
     jobs:
       - job1
-      - job2
       - job3
 jobs:
   job1:
-    executor:
-      name: my-exe
-    steps:
-      - checkout
-      - run: echo "hello world"
-      - say_hello
-
-  job2:
     executor:
       name: my-exe
     steps:
@@ -39,6 +30,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello terraform"
+      - run: terraform version
 difinitions:
 difinitionss:
     
