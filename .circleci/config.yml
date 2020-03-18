@@ -1,4 +1,8 @@
 version: 2.1
+commands:
+  say_hello:
+    steps:
+      - run: echo "hello from commands"
 jobs:
   build:
     docker:
@@ -6,4 +10,5 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
+      - say_hello
 
