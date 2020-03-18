@@ -23,7 +23,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - job1:
-      - job2:
+      - job1
+      - job2
 
     
