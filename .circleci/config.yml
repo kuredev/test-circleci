@@ -11,8 +11,8 @@ jobs:
       - checkout
       - run: echo "hello world"
       - run:
-        name: Kure Test
-        command: echo "kure test"
+          name: Kure Test
+          command: echo "kure test"
       - run:
           command: |
             echo "command1"
