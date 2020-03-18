@@ -10,7 +10,9 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: echo "hello world2"
+      - run:
+        name: Kure Test
+        command: echo "kure test"
       - run:
           command: |
             echo "command1"
