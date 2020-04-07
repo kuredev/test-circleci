@@ -4,5 +4,5 @@ update_configs:
     directory: "/"
     update_schedule: "weekly"
   - package_manager: "ruby"
-    directory: "/.dependabot/"
+    directory: "/lambda_function1/src/"
     update_schedule: "weekly"
