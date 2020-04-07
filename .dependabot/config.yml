@@ -1,8 +1,8 @@
 version: 1
 update_configs:
-  - package_manager: "ruby"
-    directory: "/"
-    update_schedule: "weekly"
+ # - package_manager: "ruby"
+ #   directory: "/"
+ #   update_schedule: "weekly"
   - package_manager: "ruby"
     directory: "/lambda_function1/src/"
     update_schedule: "weekly"
