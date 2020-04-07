@@ -3,3 +3,6 @@ update_configs:
   - package_manager: "ruby"
     directory: "/"
     update_schedule: "weekly"
+  - package_manager: "ruby"
+    directory: "/.dependabot/"
+    update_schedule: "weekly"
