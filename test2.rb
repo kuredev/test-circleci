@@ -1,0 +1,3 @@
+puts "hoge"
+puts 'hoge'
+
