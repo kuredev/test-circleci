@@ -1,14 +1,5 @@
 version: 1
 update_configs:
- # - package_manager: "ruby"
- #   directory: "/"
- #   update_schedule: "weekly"
   - package_manager: "ruby:bundler"
-    directory: "/lambda_function1/src/"
-    update_schedule: "weekly"
-  - package_manager: "ruby:bundler"
-    directory: "/lambda_function2/src/"
-    update_schedule: "weekly"
-  - package_manager: "ruby:bundler"
-    directory: "/lambda_function3/src/"
+    directory: "/lib/"
     update_schedule: "weekly"
