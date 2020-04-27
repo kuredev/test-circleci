@@ -1,7 +1,7 @@
 class Person
   attr_accessor :name
   def initialize
-    puts "ho"
+    puts "hod"
     @name = "kure"
   end
 end
