@@ -1,5 +1,6 @@
+# サブディレクトリを*で指定はできないっぽい
 version: 1
 update_configs:
   - package_manager: "ruby:bundler"
-    directory: "/lib/"
+    directory: "/lib/function1/"
     update_schedule: "weekly"
