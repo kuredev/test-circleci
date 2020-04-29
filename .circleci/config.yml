@@ -1,12 +1,13 @@
 version: 2.1
 jobs:
-  job1:
+  build:
     docker:
       - image: circleci/ruby:2.7.1
+    working_directory: ~/lib/function1
     steps:
       - checkout
       - run: echo "hello world"
-      - run: uname -a
+      - run: pwd
       - run: ruby -v
       - run: bundle -v
       - run: bundle install --path vendor/bundle
