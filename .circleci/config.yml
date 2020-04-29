@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run: echo "hello world"
       - run: pwd
+      - run: ls
       - run: ruby -v
       - run: bundle -v
       - run: bundle install --path vendor/bundle
