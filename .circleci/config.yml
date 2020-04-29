@@ -7,9 +7,16 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: pwd
-      - run: ls
-      - run: ruby -v
-      - run: bundle -v
-      - run: bundle install --path vendor/bundle
+      - run:
+        name: pwd
+        command: pwd
+        working_directory: lib/function1
+      - run:
+        name: ls
+        command: ls
+        working_directory: lib/function1
+      - run:
+        name: bundle install
+        command: bundle install --path vendor/bundle
+        working_directory: lib/function1
       - run: bundle exec rspec
