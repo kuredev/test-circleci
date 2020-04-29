@@ -3,20 +3,20 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.1
-    working_directory: ~/lib/function1
+    working_directory: ~/lib/function1 # https://qiita.com/wasnot/items/b2543faa4b8ed6082936
     steps:
       - checkout
       - run: echo "hello world"
       - run:
-        name: pwd
-        command: pwd
-        working_directory: lib/function1
+          name: pwd
+          command: pwd
+          working_directory: lib/function1
       - run:
-        name: ls
-        command: ls
-        working_directory: lib/function1
+          name: ls
+          command: ls
+          working_directory: lib/function1
       - run:
-        name: bundle install
-        command: bundle install --path vendor/bundle
-        working_directory: lib/function1
+          name: bundle install
+          command: bundle install --path vendor/bundle
+          working_directory: lib/function1
       - run: bundle exec rspec
