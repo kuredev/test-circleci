@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: unamae -a
+      - run: uname -a
       - run: ruby -v
       - run: bundle install --path vendor/bundle
       - run: bundle exec rspec
