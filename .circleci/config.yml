@@ -2,11 +2,12 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.5
+      - image: circleci/ruby:2.7.1
     steps:
       - checkout
       - run: echo "hello world"
       - run: uname -a
       - run: ruby -v
+      - run: gem install
       - run: bundle install --path vendor/bundle
       - run: bundle exec rspec
