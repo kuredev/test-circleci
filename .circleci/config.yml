@@ -8,6 +8,6 @@ jobs:
       - run: echo "hello world"
       - run: uname -a
       - run: ruby -v
-      - run: gem install
+      - run: bundle -v
       - run: bundle install --path vendor/bundle
       - run: bundle exec rspec
