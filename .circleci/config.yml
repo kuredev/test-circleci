@@ -19,4 +19,7 @@ jobs:
           name: bundle install
           command: bundle install --path vendor/bundle
           working_directory: lib/function1
-      - run: bundle exec rspec
+      - run:
+          name: rspec
+          command: bundle exec rspec
+          working_directory: lib/function1
