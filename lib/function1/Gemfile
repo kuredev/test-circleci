@@ -6,3 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem "dotenv", "2.7.5"
 gem "rspec"
+gem "aws-sdk-ec2", "1.151.0"
+gem "aws-sdk-s3", "1.61.0"
