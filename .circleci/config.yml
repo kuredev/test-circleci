@@ -4,6 +4,9 @@ workflows:
     jobs:
       - function1
       - function2
+  build2:
+    jobs:
+      - function1
 jobs:
   function1:
     docker:
