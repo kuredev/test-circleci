@@ -7,6 +7,10 @@ workflows:
   build2:
     jobs:
       - function1
+  build3:
+    when: << pipeline.parameters.build3 >>
+    jobs:
+      - function1
 jobs:
   function1:
     docker:
