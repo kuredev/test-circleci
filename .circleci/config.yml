@@ -1,4 +1,8 @@
 version: 2.1
+parameters:
+  build3_flag:
+    type: boolean
+    default: false
 workflows:
   build:
     jobs:
@@ -8,7 +12,7 @@ workflows:
     jobs:
       - function1
   build3:
-    when: << pipeline.parameters.build3 >>
+    when: << pipeline.parameters.build3_flag >>
     jobs:
       - function1
 jobs:
