@@ -6,11 +6,22 @@ parameters:
 workflows:
   build:
     jobs:
-      - function1
-      - function2
+      - function1:
+          filters:
+            branches:
+              only: master
+      - function2:
+          requires:
+            - function1
   build2:
     jobs:
-      - function1
+      - function1:
+          filters:
+            branches:
+              ignore: /^master$/
+      - function2:
+          requires:
+            - function1
   build3:
     when: << pipeline.parameters.build3_flag >>
     jobs:
