@@ -34,6 +34,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: temp
+          command: |
+            pwd
+            ls
+            git branch
+      - run:
           name: bundle install
           command: bundle install --path vendor/bundle
           working_directory: lib/function1
