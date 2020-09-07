@@ -23,9 +23,10 @@ workflows:
           requires:
             - function1
   build3:
-    when: << pipeline.parameters.build3_flag >>
+    when: << pipeline.parameters.build3_flag_test >>
     jobs:
       - function1
+
 jobs:
   function1:
     docker:
