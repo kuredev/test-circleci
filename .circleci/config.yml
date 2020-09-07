@@ -4,7 +4,7 @@ parameters:
     type: boolean
     default: false
 workflows:
-  build:
+  build1:
     jobs:
       - function1:
           filters:
