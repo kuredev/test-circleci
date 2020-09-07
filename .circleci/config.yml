@@ -39,6 +39,7 @@ jobs:
             pwd
             ls
             git branch
+            git checkout dependabot/bundler/lib/function1/aws-sdk-ec2-1.193.0
       - run:
           name: bundle install
           command: bundle install --path vendor/bundle
