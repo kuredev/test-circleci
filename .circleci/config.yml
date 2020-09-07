@@ -1,6 +1,6 @@
 version: 2.1
 parameters:
-  build3_flag:
+  build3_flag_test:
     type: boolean
     default: false
 workflows:
