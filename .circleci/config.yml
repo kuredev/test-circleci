@@ -42,7 +42,9 @@ jobs:
             git checkout dependabot/bundler/lib/function1/aws-sdk-ec2-1.193.0
             git log --oneline -n 5
             git branch
-            git checkout dependabot/bundler/lib/function1/hogehoghoge
+            git checkout master
+            git checkout -b release
+            git push origin release
       - run:
           name: bundle install
           command: bundle install --path vendor/bundle
