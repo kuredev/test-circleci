@@ -41,9 +41,13 @@ jobs:
             git branch
             git checkout dependabot/bundler/lib/function1/aws-sdk-ec2-1.193.0
             git log --oneline -n 5
+            echo 1
             git branch
+            echo 2
             git checkout master
+            echo 3
             git checkout -b release
+            echo 4
             git push origin release
       - run:
           name: bundle install
