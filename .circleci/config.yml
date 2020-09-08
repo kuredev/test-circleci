@@ -49,6 +49,7 @@ jobs:
             git checkout -b release
             echo 4
             git push origin release
+            echo 5
       - run:
           name: bundle install
           command: bundle install --path vendor/bundle
