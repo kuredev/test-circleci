@@ -1,10 +1,10 @@
 version: 2.1
 parameters:
-  build3_flag:
+  build3_flag_test:
     type: boolean
     default: false
 workflows:
-  build:
+  build1:
     jobs:
       - function1:
           filters:
@@ -23,15 +23,26 @@ workflows:
           requires:
             - function1
   build3:
-    when: << pipeline.parameters.build3_flag >>
+    when: << pipeline.parameters.build3_flag_test >>
     jobs:
       - function1
+
 jobs:
   function1:
     docker:
       - image: circleci/ruby:2.7.1
     steps:
       - checkout
+      - run:
+          name: temp
+          command: |
+            pwd
+            ls
+            git branch
+            git checkout dependabot/bundler/lib/function1/aws-sdk-ec2-1.193.0
+            git log --oneline -n 5
+            echo 1
+            git branch
       - run:
           name: bundle install
           command: bundle install --path vendor/bundle
