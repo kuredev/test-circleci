@@ -43,13 +43,6 @@ jobs:
             git log --oneline -n 5
             echo 1
             git branch
-            echo 2
-            git checkout master
-            echo 3
-            git checkout -b release
-            echo 4
-            git push origin release
-            echo 5
       - run:
           name: bundle install
           command: bundle install --path vendor/bundle
