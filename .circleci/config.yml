@@ -1,66 +1,9 @@
 version: 2.1
-parameters:
-  build3_flag_test:
-    type: boolean
-    default: false
-workflows:
-  build1:
-    jobs:
-      - function1:
-          filters:
-            branches:
-              only: master
-      - function2:
-          requires:
-            - function1
-  build2:
-    jobs:
-      - function1:
-          filters:
-            branches:
-              ignore: /^master$/
-      - function2:
-          requires:
-            - function1
-  build3:
-    when: << pipeline.parameters.build3_flag_test >>
-    jobs:
-      - function1
-
 jobs:
-  function1:
+  build:
     docker:
-      - image: circleci/ruby:2.7.1
+      - image: circleci/ruby:2.6.5
     steps:
       - checkout
-      - run:
-          name: temp
-          command: |
-            pwd
-            ls
-            git branch
-            git checkout dependabot/bundler/lib/function1/aws-sdk-ec2-1.193.0
-            git log --oneline -n 5
-            echo 1
-            git branch
-      - run:
-          name: bundle install
-          command: bundle install --path vendor/bundle
-          working_directory: lib/function1
-      - run:
-          name: rspec
-          command: bundle exec rspec
-          working_directory: lib/function1
-  function2:
-    docker:
-      - image: circleci/ruby:2.7.1
-    steps:
-      - checkout
-      - run:
-          name: bundle install
-          command: bundle install --path vendor/bundle
-          working_directory: lib/function2
-      - run:
-          name: rspec
-          command: bundle exec rspec
-          working_directory: lib/function2
+      - run: echo "hello world"
+      - say_hello
