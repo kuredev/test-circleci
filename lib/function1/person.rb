@@ -6,6 +6,7 @@ class Person
   end
 end
 
+#
 class Person2
   attr_accessor :name
   def initialize
