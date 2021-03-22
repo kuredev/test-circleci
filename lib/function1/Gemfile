@@ -7,5 +7,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem "dotenv", "2.7.6"
 gem "rspec"
 gem "aws-sdk-ec2", "1.164.0"
-gem "aws-sdk-s3", "1.81.1"
+gem "aws-sdk-s3", "1.92.0"
 gem "slack-notifier", "2.3.0"
