@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/lib/function1"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: aws-sdk-ec2
+    versions:
+    - 1.221.0
+    - 1.224.0
+    - 1.225.0
+    - 1.226.0
+    - 1.227.0
+    - 1.228.0
+    - 1.230.0
+    - 1.232.0
+  - dependency-name: aws-sdk-s3
+    versions:
+    - 1.87.0
+    - 1.88.0
+    - 1.88.1
+    - 1.89.0
+    - 1.91.0
+    - 1.92.0
+    - 1.93.0
