@@ -3,10 +3,10 @@ commands:
   export_aws_credentials:
     steps:
       - run:
-        name: export_aws_credentials
-        command: |
-            echo "export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $BASH_ENV
-            echo "export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $BASH_ENV
+          name: export_aws_credentials
+          command: |
+              echo "export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $BASH_ENV
+              echo "export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $BASH_ENV
 jobs:
   build:
     docker:
@@ -18,9 +18,9 @@ jobs:
       - command: ls
       - command: aws ec2 describe-instances
       - run:
-        name: terraform
-        command: |
-          curl -sSL https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip -o /tmp/terraform.zip
-          sudo unzip -o /tmp/terraform.zip -d /usr/local/bin/
-          terraform init -reconfigure
-          terraform apply -auto-approve
+          name: terraform
+          command: |
+            curl -sSL https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip -o /tmp/terraform.zip
+            sudo unzip -o /tmp/terraform.zip -d /usr/local/bin/
+            terraform init -reconfigure
+            terraform apply -auto-approve
