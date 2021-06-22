@@ -14,9 +14,9 @@ jobs:
     steps:
       - checkout
       - export_aws_credentials
-      - command: pwd
-      - command: ls
-      - command: aws ec2 describe-instances
+      - run: pwd
+      - run: ls
+      - run: aws ec2 describe-instances
       - run:
           name: terraform
           command: |
