@@ -17,9 +17,14 @@ jobs:
       - run: pwd
       - run: ls
       - run:
+          name: bundle install
+          command: |
+            cd src
+            bundle install --path vendor/bundle
+      - run:
           name: terraform
           command: |
-            cd terraform
+            cd ../terraform
             curl -sSL https://releases.hashicorp.com/terraform/0.15.3/terraform_0.15.3_linux_amd64.zip -o /tmp/terraform.zip
             sudo unzip -o /tmp/terraform.zip -d /usr/local/bin/
             terraform init -reconfigure
