@@ -16,7 +16,6 @@ jobs:
       - export_aws_credentials
       - run: pwd
       - run: ls
-      - run: aws ec2 describe-instances
       - run:
           name: terraform
           command: |
