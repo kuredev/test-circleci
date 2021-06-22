@@ -26,9 +26,10 @@ jobs:
           name: terraform
           command: |
             echo "terraform"
+            uname -a
             pwd
             cd terraform
             curl -sSL https://releases.hashicorp.com/terraform/0.15.3/terraform_0.15.3_linux_amd64.zip -o /tmp/terraform.zip
             sudo unzip -o /tmp/terraform.zip -d /usr/local/bin/
-            terraform init
-            terraform apply -auto-approve
+            #terraform init
+            #terraform apply -auto-approve
