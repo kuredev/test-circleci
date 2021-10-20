@@ -1,5 +1,7 @@
 {
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    ":timezone(Asia/Tokyo)"
+  ],
+  "schedule": ["after 1pm on wednesday", "before 2pm on wednesday"]
 }
