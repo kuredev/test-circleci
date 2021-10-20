@@ -1,35 +1,7 @@
 version: 2.1
-commands:
-  export_aws_credentials:
-    steps:
-      - run:
-          name: export_aws_credentials
-          command: |
-              echo "export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $BASH_ENV
-              echo "export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $BASH_ENV
 jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.3
     steps:
-      - checkout
-      - export_aws_credentials
-      - run: pwd
-      - run: ls
-      - run:
-          name: bundle install
-          command: |
-            cd src
-            ls
-            bundle install --path vendor/bundle
-      - run:
-          name: terraform
-          command: |
-            echo "terraform"
-            uname -a
-            pwd
-            cd terraform
-            curl -sSL https://releases.hashicorp.com/terraform/0.15.3/terraform_0.15.3_linux_amd64.zip -o /tmp/terraform.zip
-            sudo unzip -o /tmp/terraform.zip -d /usr/local/bin/
-            #terraform init
-            #terraform apply -auto-approve
+      - run: echo "hoge"
