@@ -10,7 +10,7 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.3
+      - image: circleci/ruby:2.7.4
     steps:
       - checkout
       - export_aws_credentials
