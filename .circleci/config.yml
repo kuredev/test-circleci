@@ -6,9 +6,9 @@ jobs:
     steps:
       - run: echo "hoge"
       - run:
-        name: Create Dummy File
-        command: |
-          echo "Create File"
-          echo "hogehgoe" > /tmp/hoge
+          name: Create Dummy File
+          command: |
+            echo "Create File"
+            echo "hogehgoe" > /tmp/hoge
       - store_artifacts:
-        path: /tmp/hoge
+         path: /tmp/hoge
