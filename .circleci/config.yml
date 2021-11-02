@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.7.3
     steps:
+      - checkout
       - run: echo "hoge"
       - run:
           name: run script
