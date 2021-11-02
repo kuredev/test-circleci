@@ -18,3 +18,4 @@ jobs:
             echo "hogehgoe" > /tmp/hoge
       - store_artifacts:
          path: /tmp/hoge
+         destination: "code-coverage"
