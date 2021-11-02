@@ -6,6 +6,11 @@ jobs:
     steps:
       - run: echo "hoge"
       - run:
+          name: run script
+          command: |
+            chmod u+x ./lib/test.sh
+            ./lib/test.sh
+      - run:
           name: Create Dummy File
           command: |
             echo "Create File"
