@@ -15,7 +15,11 @@ jobs:
           name: Create Dummy File
           command: |
             echo "Create File"
-            echo "hogehgoe" > /tmp/hoge
+            echo "111111111" > /tmp/hoge
+            mkdir /tmp/hoge1
+            echo "222222222" > /tmp/hoge1/hoge
+            mkdir /tmp/hoge2
+            echo "333333333" > /tmp/hoge2/hoge
       - store_artifacts:
-         path: /tmp/hoge
+         path: /tmp
          destination: "code-coverage"
