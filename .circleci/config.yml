@@ -3,8 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.2
-    steps: #
-      - run:
+    steps:
+      - run: # ここでシェルが立ち上がる
+          name: test_kure
           command: |
             echo hoge1
             echo hoge2
