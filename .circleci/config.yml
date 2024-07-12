@@ -4,4 +4,6 @@ jobs:
     docker:
       - image: circleci/ruby:2.7.2
     steps: #
-      - run: echo "hello world"
+      - command: |
+        echo "hoge1"
+        echo "hoge2"
