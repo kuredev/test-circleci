@@ -4,8 +4,9 @@ jobs:
     docker:
       - image: circleci/ruby:2.7.2
     steps:
+      - checkout
       - run: # ここでシェルが立ち上がる
           name: test_kure
           command: |
-            pwd
+            pwd # /home/circleci/project
             ls
