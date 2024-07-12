@@ -1,12 +1,20 @@
 version: 2.1
+commands:
+  command1:
+    steps:
+      - run: # ここでシェルが立ち上がる
+          name: test_kure2
+          command: |
+            pwd # /home/circleci/project
+            echo 'from commands'
 jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.2
     steps:
-      - checkout
       - run: # ここでシェルが立ち上がる
           name: test_kure
           command: |
             pwd # /home/circleci/project
-            ls
+            echo 'jobs'
+      - command1
