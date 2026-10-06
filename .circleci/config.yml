@@ -19,4 +19,8 @@ jobs:
             ls
             pwd # /home/circleci/project
             echo 'jobs'
+            echo "hoge $(date)" >> hoge.txt
+            git add hoge.txt
+            git commit -m "update hoge.txt [skip ci]"
+            git push origin HEAD
       - command1
