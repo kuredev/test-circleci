@@ -20,6 +20,8 @@ jobs:
             pwd # /home/circleci/project
             echo 'jobs'
             echo "hoge $(date)" >> hoge.txt
+            git config user.name  "circleci"
+            git config user.email "circleci@example.com"
             git add hoge.txt
             git commit -m "update hoge.txt [skip ci]"
             git push origin HEAD
