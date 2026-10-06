@@ -10,11 +10,13 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.2
+      - image: circleci/ruby:4.0.7
     steps:
+      - checkout
       - run: # ここでシェルが立ち上がる
           name: test_kure
           command: |
+            ls
             pwd # /home/circleci/project
             echo 'jobs'
       - command1
