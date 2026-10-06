@@ -10,7 +10,7 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:4.0.7
+      - image: cimg/ruby:4.0.7
     steps:
       - checkout
       - run: # ここでシェルが立ち上がる
